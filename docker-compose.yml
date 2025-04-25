@@ -1,0 +1,29 @@
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: staging_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  sqlserver:
+    platform: linux/amd64 
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "Mypassword@123"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+
+
+volumes:
+  pgdata:
+  sqlserverdata:
