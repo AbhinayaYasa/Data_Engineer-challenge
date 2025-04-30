@@ -31,6 +31,7 @@ All components run in Docker containers and are orchestrated using Docker Compos
 
 **docker-compose up -d** - start docker
 
+
 **Run ETL Pipeline:** 
 
 python main.py
@@ -39,6 +40,7 @@ python main.py
 **For SQL Server:**
 
 sqlcmd -S 127.0.0.1 -U sa -P 'Mypassword@123' -d master
+
 
 **Then inside sqlcmd:**
 
