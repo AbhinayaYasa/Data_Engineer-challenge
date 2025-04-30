@@ -22,11 +22,13 @@ All components run in Docker containers and are orchestrated using Docker Compos
 - Libraries: requests, pandas, psycopg2-binary, pyodbc, sqlalchemy, python-dotenv
   
 **Setup Instructions:**
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+python3 -m venv venv - create virtual environment
 
-docker-compose up -d
+source venv/bin/activate - activate virtual environment
+
+pip install -r requirements.txt - install dependencies
+
+docker-compose up -d - start docker
 
 **Run ETL Pipeline:** 
 python main.py
