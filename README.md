@@ -44,10 +44,10 @@ All components run in Docker containers and are orchestrated using Docker Compos
 
 **Then inside sqlcmd:**
 
--USE warehouse_db;
+- USE warehouse_db;
 GO
 
--SELECT name from sys.tables;
+- SELECT name from sys.tables;
 GO
 
--SELECT TOP 10 * FROM FactUserPosts;
+- SELECT TOP 10 * FROM FactUserPosts;
