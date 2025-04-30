@@ -22,6 +22,7 @@ All components run in Docker containers and are orchestrated using Docker Compos
 - Libraries: requests, pandas, psycopg2-binary, pyodbc, sqlalchemy, python-dotenv
   
 **Setup Instructions:**
+
 python3 -m venv venv - create virtual environment
 
 source venv/bin/activate - activate virtual environment
@@ -31,13 +32,16 @@ pip install -r requirements.txt - install dependencies
 docker-compose up -d - start docker
 
 **Run ETL Pipeline:** 
+
 python main.py
 
 
 **For SQL Server:**
+
 sqlcmd -S 127.0.0.1 -U sa -P 'Mypassword@123' -d master
 
 **Then inside sqlcmd:**
+
 USE warehouse_db;
 GO
 
@@ -45,5 +49,3 @@ SELECT name from sys.tables;
 GO
 
 SELECT TOP 10 * FROM FactUserPosts;
-
-
