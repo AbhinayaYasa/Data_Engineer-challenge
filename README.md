@@ -23,23 +23,23 @@ All components run in Docker containers and are orchestrated using Docker Compos
   
 **Setup Instructions:**
 
-**python3 -m venv venv** - create virtual environment
+- **python3 -m venv venv** - create virtual environment
 
-**source venv/bin/activate** - activate virtual environment
+- **source venv/bin/activate** - activate virtual environment
 
-**pip install -r requirements.txt** - install dependencies
+- **pip install -r requirements.txt** - install dependencies
 
-**docker-compose up -d** - start docker
+- **docker-compose up -d** - start docker
 
 
 **Run ETL Pipeline:** 
 
-python main.py
+- python main.py
 
 
 **For SQL Server:**
 
-sqlcmd -S 127.0.0.1 -U sa -P 'Mypassword@123' -d master
+- sqlcmd -S 127.0.0.1 -U sa -P 'Mypassword@123' -d master
 
 
 **Then inside sqlcmd:**
